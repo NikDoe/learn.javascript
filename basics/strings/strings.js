@@ -17,3 +17,12 @@ const index = park.indexOf('Stone'); //-1, cause no mathes
 console.log(index);
 
 console.log("GARBAGE".slice(2).replace("B", "_"));
+
+//tasks from learn.javascript
+let myName = "NikDoe";
+
+console.log( `hello ${1}` );
+
+console.log( `hello ${"name"}` );
+
+console.log( `hello ${myName}` );
