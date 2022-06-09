@@ -87,3 +87,30 @@ function getCard () {
 
 const card = getCard();
 console.log(card);
+
+//task 1
+function pow (x, n) {
+	let total = 1;
+	for (let i = 0; i < n; i++) {
+		total *= x;
+	}
+	return total;
+}
+
+const x = +prompt('Введите число', '');
+const n = +prompt('Введите степень в которую хотите возвести число', '');
+
+function printMessage () {
+	const userEscapeX = x !== 0;
+	const userEscapeN = n !== 0;
+	const isNatural = x > 1;
+
+	const output =
+
+			userEscapeX && userEscapeN && isNatural ? pow(x, n) :
+			'Введите валидные значения';
+
+	return output;
+}
+
+console.log(printMessage());
