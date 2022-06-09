@@ -48,3 +48,42 @@ function isPangram (str) {
 const pangram1 = isPangram('Mr Jock, TV quiz PhD, bags few lynx');
 const pangram2 = isPangram('Mr Jock, TV quiz PhD, bags few lyn');
 console.log(pangram1, pangram2);
+
+//challenge 4
+function getRandomCard (arr) {
+	const index = Math.floor(Math.random() * arr.length);
+	return arr[index];
+}
+
+function getCard () {
+	const values = [
+		'2',
+		'3',
+		'4',
+		'5',
+		'6',
+		'7',
+		'8',
+		'9',
+		'10',
+		'J',
+		'Q',
+		'K',
+		'A'
+	];
+
+	const suits = [
+		'clubs',
+		'spades',
+		'hearts',
+		'diamonds'
+	];
+
+	return {
+		value : getRandomCard(values),
+		suit  : getRandomCard(suits)
+	};
+}
+
+const card = getCard();
+console.log(card);
