@@ -35,3 +35,16 @@ const avg2 = avg([
 	100
 ]); // 85.2
 console.log(avg2);
+
+//chalenge 3
+function isPangram (str) {
+	let lowerCased = str.toLowerCase();
+	for (let char of 'abcdefghijklmnopqrstuvwxyz') {
+		if (!lowerCased.includes(char)) return false;
+	}
+	return true;
+}
+
+const pangram1 = isPangram('Mr Jock, TV quiz PhD, bags few lynx');
+const pangram2 = isPangram('Mr Jock, TV quiz PhD, bags few lyn');
+console.log(pangram1, pangram2);
