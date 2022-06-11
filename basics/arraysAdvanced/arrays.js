@@ -136,3 +136,15 @@ const groupBooksByAuthors = books.reduce((group, book) => {
 }, {});
 
 console.log(groupBooksByAuthors);
+
+//task 2
+const camelize = (str) => {
+	const newStr = str
+		.split('-')
+		.map((el, index) => {
+			return index === 0 ? el : el[0].toUpperCase() + el.slice(1);
+		})
+		.join('');
+	console.log(newStr);
+	// return;
+};
