@@ -229,3 +229,25 @@ function getAverageAge (arr) {
 
 const avg = getAverageAge(users);
 console.log(avg);
+
+//task 10
+let strings = [
+	'кришна',
+	'кришна',
+	'харе',
+	'харе',
+	'харе',
+	'харе',
+	'кришна',
+	'кришна',
+	':-O'
+];
+
+const unique = (arr) => {
+	return arr.reduce((acc, curr) => {
+		if (!acc.includes(curr)) acc.push(curr);
+		return acc;
+	}, []);
+};
+
+console.log(unique(strings));
