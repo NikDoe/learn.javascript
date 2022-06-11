@@ -174,3 +174,19 @@ let arrSort = [
 ];
 arrSort.sort((a, b) => b - a);
 console.log(arrSort);
+
+//task 5
+let newSortArr = [
+	'HTML',
+	'JavaScript',
+	'CSS'
+];
+
+const copySorted = (arr) => {
+	return arr.slice().sort();
+};
+
+let sorted = copySorted(newSortArr);
+
+console.log(sorted); // CSS, HTML, JavaScript
+console.log(newSortArr); // HTML, JavaScript, CSS (без изменений)
