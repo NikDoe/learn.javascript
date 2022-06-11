@@ -163,3 +163,14 @@ const filterRange = (arr, a, b) => {
 
 let filtered = filterRange(arr, 1, 4);
 console.log(filtered);
+
+//task 4
+let arrSort = [
+	5,
+	2,
+	1,
+	-10,
+	8
+];
+arrSort.sort((a, b) => b - a);
+console.log(arrSort);
