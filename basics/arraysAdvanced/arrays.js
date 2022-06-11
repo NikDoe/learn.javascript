@@ -192,9 +192,9 @@ console.log(sorted); // CSS, HTML, JavaScript
 console.log(newSortArr); // HTML, JavaScript, CSS (без изменений)
 
 //task 6
-let vasya = { name: 'Вася', age: 25 };
-let petya = { name: 'Петя', age: 30 };
-let masha = { name: 'Маша', age: 28 };
+let vasya = { name: 'Вася', surname: 'Пупкин', id: 1, age: 25 };
+let petya = { name: 'Петя', surname: 'Иванов', id: 2, age: 30 };
+let masha = { name: 'Маша', surname: 'Петрова', id: 3, age: 28 };
 
 let users = [
 	vasya,
@@ -204,3 +204,11 @@ let users = [
 
 let names = users.map((el) => el.name);
 console.log(names);
+
+//task 7
+let usersMapped = users.map((el) => ({
+	fullName : el.name + el.surname,
+	id       : el.id
+}));
+
+console.log(usersMapped);
