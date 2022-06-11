@@ -212,3 +212,20 @@ let usersMapped = users.map((el) => ({
 }));
 
 console.log(usersMapped);
+
+//task 8
+const sortByAge = (arr) => {
+	return arr.sort((a, b) => a.age - b.age);
+};
+
+sortByAge(users);
+
+console.log(users[0].name, users[1].name, users[2].name);
+
+//task 9
+function getAverageAge (arr) {
+	return arr.reduce((prev, user) => prev + user.age, 0) / arr.length;
+}
+
+const avg = getAverageAge(users);
+console.log(avg);
