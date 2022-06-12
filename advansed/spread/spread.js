@@ -9,3 +9,20 @@ function giveMeFour(a, b, c, d) {
 const colors = ['red', 'blue', 'green', 'orange', 'yellow'];
 
 giveMeFour(...colors);
+
+//arrays literals
+const arrayOfNums = [1, 2, 3, 4, 5];
+const arrayOfStrings = ['red', 'green'];
+
+const newArrOfEverything = [
+	...'abc',
+	...arrayOfNums,
+	null,
+	undefined,
+	...arrayOfStrings,
+	1,
+	2,
+	3,
+	'HELLO',
+];
+console.log(newArrOfEverything);
