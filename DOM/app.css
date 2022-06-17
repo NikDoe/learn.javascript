@@ -1,11 +1,7 @@
-body {
-    background: #ccff85;
+.red {
+    background: indianred;
 }
 
-li {
-    background-color: #B10DC9;
-}
-
-.highlight {
-    background-color: #7FDBFF;
+.green {
+    background: greenyellow;
 }
