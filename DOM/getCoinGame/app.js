@@ -15,7 +15,6 @@ const init = () => {
 	const coin = document.querySelector('#coin');
 	const score = document.querySelector('#score b');
 
-	// console.log(score.textContent);
 	moveCoin();
 	window.addEventListener('keyup', function (e) {
 		if (e.key === 'ArrowDown' || e.key === 'Down') {
