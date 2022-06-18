@@ -13,6 +13,9 @@ function isTouching(a, b) {
 const init = () => {
 	const avatar = document.querySelector('#player');
 	const coin = document.querySelector('#coin');
+	const score = document.querySelector('#score b');
+
+	// console.log(score.textContent);
 	moveCoin();
 	window.addEventListener('keyup', function (e) {
 		if (e.key === 'ArrowDown' || e.key === 'Down') {
@@ -26,7 +29,10 @@ const init = () => {
 			moveHorizontal(avatar, -50);
 			avatar.style.transform = 'scale(-1,1)';
 		}
-		if (isTouching(avatar, coin)) moveCoin();
+		if (isTouching(avatar, coin)) {
+			moveCoin();
+			score.textContent++;
+		}
 	});
 };
 
