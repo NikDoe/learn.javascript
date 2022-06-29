@@ -19,14 +19,20 @@ const moveX = (element, amount, delay) => {
 	});
 };
 
-moveX(btn, 300, 1000)
-	.then(() => moveX(btn, 300, 1000))
-	.then(() => moveX(btn, 300, 1000))
-	.then(() => moveX(btn, 300, 1000))
-	.then(() => moveX(btn, 300, 1000))
-	.catch(({ bodyBoundary, elRight, amount }) => {
+const animateRight = async function (el, a) {
+	try {
+		await moveX(el, a, 1000);
+		await moveX(el, a, 1000);
+		await moveX(el, a, 1000);
+		await moveX(el, a, 1000);
+	} catch ({ bodyBoundary, elRight, amount }) {
 		console.log(`Cannot Move! Body is ${bodyBoundary}px wide`);
 		console.log(
 			`Element is at ${elRight}px, amount of ${amount}px is too large!`,
 		);
-	});
+
+		await animateRight(el, -a);
+	}
+};
+
+animateRight(btn, 300);
