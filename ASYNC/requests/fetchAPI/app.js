@@ -1,30 +1,22 @@
-const checkStatusAndParse = response => {
-	if (!response.ok) throw new Error(`${response.status}, page not found`);
-
-	return response.json();
-};
-
-const printPlanets = data => {
-	data.results.forEach(({ name }) => {
+const printPlanets = ({ data }) => {
+	for (const { name } of data.results) {
 		console.log(name);
-	});
+	}
 
 	return Promise.resolve(data.next);
 };
 
-const fetchNextPlanets = (url = 'https://swapi.dev/api/planets/') => {
-	return fetch(url);
+const fetchNextPlanets = (url = 'https://swapi.dev/api/planedasfts/') => {
+	return axios.get(url);
 };
 
 fetchNextPlanets()
-	.then(checkStatusAndParse)
 	.then(printPlanets)
 	.then(fetchNextPlanets)
-	.then(checkStatusAndParse)
 	.then(printPlanets)
 	.then(fetchNextPlanets)
 	.catch(err => {
-		console.error(err);
+		console.log('ERROR!!', err);
 	});
 
 console.log('response is send');
